@@ -13,6 +13,7 @@ const AuthProvider = ({ children }) => {
 
     const handleAuth = (id) => {
         if (auth) {
+            console.log("auth");
             setAuth(null);
         } else {
             setAuth(true);
@@ -23,7 +24,9 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         Axios.get("https://pensiones-backend-production.up.railway.app/login").then((response) => {
-            handleAuth(response.data.user[0].Id);
+            if (response.data.user) {
+                handleAuth(response.data.user[0].Id);
+            }
         })
 
 

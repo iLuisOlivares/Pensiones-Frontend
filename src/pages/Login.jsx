@@ -10,17 +10,19 @@ export const Login = () => {
   
   const [ emailLog, setEmailLog ] = useState("");
   const [ passwordLog, setPasswordLog ] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const {handleAuth} = useContext(AuthContext);
 
   const login = (e) =>{
     e.preventDefault();
+    setLoading(true)
     Axios.post("https://pensiones-backend-production.up.railway.app/login",{
       correo: emailLog,
       contra: passwordLog,
     }).then((response) =>{
-      console.log(response);
+      setLoading(false);
         if(response.data.message){
           Swal.fire({
             icon: 'error',
@@ -28,6 +30,11 @@ export const Login = () => {
             text: response.data.message,
           })
         }else{
+          Swal.fire({
+            icon: 'success',
+            title: 'Has iniciado sesión!',
+            text: response.data.message,
+          })
           handleAuth(response.data[0].Id);
           navigate("/home");
         }
@@ -60,6 +67,8 @@ export const Login = () => {
       <div className='d-flex flex-column text-center'>
       <button onClick={login} className="btn btn-primary">Iniciar sesión</button>
       </div>
+
+      {loading && <p className='text-center m-1 text-primary'>Comprobando tus datos...</p>}
 
       </form>
     
