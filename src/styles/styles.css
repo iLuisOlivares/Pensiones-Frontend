@@ -1,0 +1,168 @@
+.background-p {
+    background-color: rgb(8, 110, 150);
+}
+
+.selected {
+    color: #fff;
+    background-color: rgb(143, 71, 210);
+
+}
+
+.selected:hover {
+    text-shadow: 0 0 100px #fff;
+    color: rgb(143, 71, 210) !important;
+    background-color: #fff;
+
+}
+
+.cardstyle {
+    max-width: 540px;
+
+}
+
+.contenedor-login {
+    background-color: #f7f7f7;
+    max-width: 750px;
+    padding: 3em;
+    border-radius: 10px;
+    position: relative;
+}
+
+.height {
+    min-height: 80vh;
+}
+
+.card-img-style {
+    height: 200px;
+    object-fit: cover;
+}
+
+.oscurecer-img {
+    filter: brightness(30%);
+}
+
+.button-round {
+    border-radius: 20px;
+}
+
+.img {
+    object-fit: fill;
+    height: 100%
+}
+
+.img-h {
+    object-fit: cover;
+    max-height: 520px;
+}
+
+.secondary-color {
+    background-color: rgb(14, 87, 146);
+    border-radius: 20px 20px 0px 0px;
+}
+
+.select-h:hover {
+    color: rgb(214, 250, 254);
+}
+
+.bg-color {
+    background-color: rgb(45, 121, 172);
+}
+
+.min-width {
+    min-width: 300px;
+}
+
+.img-contenedor {
+    height: 300px;
+    width: 300px;
+}
+
+.card-title {
+    height: 40px;
+    font-size: 18px;
+}
+
+.img-profile {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+    margin: 10px 50px 0px 0px;
+}
+
+
+.container-vh {
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* boton flotante */
+
+
+#btn-mas {
+    display: none;
+}
+
+.cont-b {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+.redes a,
+.btn-mas label {
+    display: block;
+    text-decoration: none;
+    background: #2b6ecc;
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 500ms ease;
+}
+
+.redes a:hover {
+    background: #fff;
+    color: #362bcc;
+}
+
+.redes a {
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked~.redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-mas label {
+    cursor: pointer;
+    background: rgb(14, 87, 146);
+    font-size: 15px;
+}
+
+#btn-mas:checked~.btn-mas label {
+    transform: rotate(360deg);
+    font-size: 15px;
+}
