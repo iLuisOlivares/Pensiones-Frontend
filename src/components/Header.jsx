@@ -5,8 +5,12 @@ import '../styles/styles.css'
 export const Header = () => {
 
   const logout = () =>{
-    fetch('https://pensiones-backend-production.up.railway.app/logout')
-   .then((response) => console.log(response));
+    const options = {method: 'GET'};
+
+  fetch('https://pensiones-backend-production.up.railway.app/logout', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
   }
 
   return (
