@@ -1,15 +1,22 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import '../styles/styles.css'
+import { useContext } from 'react';
+import AuthContext from '../contexts/AuthContext';
 
 export const Header = () => {
+
+  const {handleAuth} = useContext(AuthContext);
+
 
   const logout = () =>{
     const options = {method: 'GET'};
 
   fetch('https://pensiones-backend-production.up.railway.app/logout', options)
   .then(response => response.json())
-  .then(response => console.log(response))
+  .then(response => {
+    handleAuth();
+  })
   .catch(err => console.error(err));
   }
 
