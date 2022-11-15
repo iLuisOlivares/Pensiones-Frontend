@@ -25,24 +25,17 @@ export const Home = () => {
 
       <h3 className='m-3 pt-5 text-light text-center'>¿Que tipo de inmueble estas buscando?</h3>
       
-      <NavLink>
-
-      </NavLink>
+    
 
        <div className='col'>
         <NavLink to="/properties">
-        <CardOverlay img={"https://www.hotelcasasanagustin.com/img/cartagena_4.png"} title={"Las mejores pensiones"} text={"Las mejores pensiones de Cartagena con todos los servicios incluidos"} cantidad={4}></CardOverlay>
+        <CardOverlay img={"https://www.hotelcasasanagustin.com/img/cartagena_4.png"} title={"Las mejores pensiones"}  link={"/properties"} text={"Las mejores pensiones de Cartagena con todos los servicios incluidos"} cantidad={4}></CardOverlay>
         </NavLink>
       
         </div> 
        <div className='col'>
        <NavLink to="/properties">
-        <CardOverlay img={"https://colombiarents.com/wp-content/uploads/2015/08/apartamentos-venta-cartagena-1.jpg"}   title={"Filtra tus busquedas"} text={"Busca tu zona de preferencia y encuentra tu lugar ideal"} cantidad={5}></CardOverlay>
-        </NavLink>
-        </div> 
-       <div className='col'>
-       <NavLink to="/properties">
-        <CardOverlay img={"https://cf.bstatic.com/xdata/images/hotel/max1024x768/335990803.jpg?k=ee5e675bd47930242909fd39431a1f79aa1a044a74c5af3fbe09eb62456516e8&o=&hp=1"} link={"/properties"}  title={"Contactalos facilmente"} text={"Comunicacion directa con los dueños, contactalos desde whatsapp o llamalos directamente!!"} cantidad={3}></CardOverlay>
+        <CardOverlay img={"https://colombiarents.com/wp-content/uploads/2015/08/apartamentos-venta-cartagena-1.jpg"} link={"/properties"}  title={"Contactalos facilmente"} text={"Comunicacion directa con los dueños, contactalos desde whatsapp o llamalos directamente!!"} cantidad={3}></CardOverlay>
         </NavLink>
         </div> 
        <div className='col'>
@@ -52,7 +45,7 @@ export const Home = () => {
         </div> 
        <div className='col'>
         <NavLink to="/properties">
-        <CardOverlay img={"https://cf.bstatic.com/xdata/images/hotel/max1024x768/335990803.jpg?k=ee5e675bd47930242909fd39431a1f79aa1a044a74c5af3fbe09eb62456516e8&o=&hp=1"} link={"/my/properties"}  title={"Tus pensiones"} text={"Edita o elimina tus pensiones en esta seccion"} cantidad={2}></CardOverlay>
+        <CardOverlay img={"https://lp-cms-production.imgix.net/features/2013/01/Cartagena_Colombia_cs-b9a2c77a9fe3.jpg"} link={"/my/properties"}  title={"Tus pensiones"} text={"Edita o elimina tus pensiones en esta seccion"} cantidad={2}></CardOverlay>
         </NavLink>
         </div> 
 
